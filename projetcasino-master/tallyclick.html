@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="tallyclick.css">
+    <title>ClickGame</title>
+</head>
+
+<body>
+    <!-- La NavBar -->
+    <header>
+        <h1 class="glow"><a href="index.html">Neon Games</a></h1>
+        <nav>
+            <ul class="nav__items">
+                <li><a href="tallyclick.html" class="button">Tallyclick</a></li>
+                <li><a href="Drawing.html" class="button">Pixeldrawer</a></li>
+                <li><a href="puissanceq.html" class="button">Puissance4</a></li>
+                <li><a href="JustePrix.html" class="button">Justeprix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Message de Lancement -->
+        <h2></h2>
+        <h3>TallyClickGame</h3>
+
+        <!-- Les boutons -->
+        <aside id='menujeu'>
+            <!-- Boutons de difficultés -->
+            <button class='menu' onclick="SetDiff('facile')">Level 1 : Easy</button>
+            <button class='menu' onclick="SetDiff('moyen')">Level 2 : Medium</button>
+            <button class='menu' onclick="SetDiff('hard')">Level 3 : Hard</button>
+            <button class='menu' onclick="SetDiff('impossible')">Level 4 : Godlike</button>
+            <!-- Lancer le jeu -->
+            <button class='menu' onclick="Startgame()" id="launch">Start Clicking</button>
+        </aside>
+
+        <!-- La fenêtre de jeu -->
+        <article>
+            <div class='limit-gauche'></div>
+            <div id="test" class='limit-droite'></div>
+            <section>
+
+            </section>
+        </article>
+
+        <aside>
+            <!-- Le clicker -->
+            <section class="tali">
+                <div id="tigefer"></div>
+                <div id="tigefer2"></div>
+                <div id="fauxreset"></div>
+                <button id="reset" onclick="reset()">Remettre à zéro</button>
+                <span id="cliks">0 0 0 0</span>
+                <button id="pushclick" onclick="clique()">PUSH</button>
+            </section>
+            <!-- Le score -->
+            <section>
+                <p class="score">Votre score est de :</p>
+            </section>
+            <!-- L'infobulle -->
+            <section class="infobulle">
+                <section class="rightarrow"></section>
+                <p class="info">Pour démarrer le jeu vous devez sélectionner une des 4 difficultés ci-dessus, puis,
+                    appuyer sur "Start Clicking".
+                    <br><br>
+                    Votre objectif est de comptabiliser les Neon-Men au moment exact où ils rentrent dans le
+                    Neon-Portal, ATTENTION A VOUS S'IL EN MANQUE !
+                </p>
+                <br>
+                <a class="wikitally" href="https://fr.wikipedia.org/wiki/Compteur_manuel" target="_blank">Lien vers la
+                    définition Wikipédia du TallyCounter</a>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Le footer -->
+    <footer>
+
+    </footer>
+
+    <!-- Intégration du JS -->
+    <script type="text/javascript" src="tallyclick.js">
+    </script>
+</body>
+
+</html>

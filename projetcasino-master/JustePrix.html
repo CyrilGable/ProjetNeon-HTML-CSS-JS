@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Juste Prix</title>
+    <link rel="icon" href="robot-design_copie.svg" />
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="JustePrix.css" />
+    <script src="JustePrix.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="glow"><a href="index.html">Neon Games</a></h1>
+        <nav>
+            <ul class="nav__items">
+                <li><a href="tallyclick.html" class="button">Tallyclick</a></li>
+                <li><a href="Drawing.html" class="button">Pixeldrawer</a></li>
+                <li><a href="puissanceq.html" class="button">Puissance4</a></li>
+                <li><a href="JustePrix.html" class="button">Justeprix</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="glow" id="titre"><a href="JustePrix.html">Le Juste Prix</a></h1>
+        <section id="regles">
+            <div>Te voilà sur Le Juste prix, le but du jeu est de deviner en moins de coups que le robot le chiffre
+                mystère.
+                <br>Commence en cliquant sur "Commencer" et suis les instructions.
+                <br> Bonne chance face au robot <br> ; )
+                <br><br><a
+                    href="https://fr.wikipedia.org/wiki/Le_Juste_Prix#:~:text=Un%20article%20de%20Wikip%C3%A9dia%2C%20l%27encyclop%C3%A9die%20libre.&text=Le%20Juste%20Prix%20est%20un,2015%20%2C%20avec%20Vincent%20Lagaf">
+                    --> Lien vers les règles du jeu détaillées</a>
+            </div>
+        </section>
+        <button class="button_click" id="Commencer" onclick="Debut()">Commencer</button>
+        <section id="contenu">
+            <!--Affiche les compteurs au dessus de l'image centrale  -->
+            <section id="LesDonnes">
+                <section id="MonCompteur"> </section>
+                <section id="SonCompteur"></section>
+            </section>
+            <!--Image centrale comportant les consignes + input + boutons + message d'erreur  -->
+            <article id="input">
+                <!-- Les scores affichés à la fin de la partie  -->
+                <section id="LesScores">
+                    <section id="MonScore"></section>
+                    <section id="SonScore"></section>
+                </section>
+
+                <!-- PARTIE 1_1 : Consigne première partie du jeu  + bouton jouer  -->
+                <section id="AfficherConsigne">Bienvenue ! <br><br> Ta mission pour cette première partie est de trouver
+                    le nombre mystère. <br><br> Tu devras rentrer des nombres compris entre 0 et 100,1000 ou 10 000
+                    selon le niveau choisi.<br><br> A toi de jouer ! </section>
+                <section id="AfficherNiveaux"> <button id="BoutonAfficherNiveaux" class="button_click" type="button"
+                        onclick="Partie1_2();"> Jouer </button></section>
+
+                <!-- PARTIE 1_2 : Choix du niveau -->
+                <section id="Niveau">
+                    <button type="button" class="button_click" onclick="Niveau1()" onmouseover="mouse(1, 100)"
+                        onmouseleave="mouse(0, 100)"> Niveau 1 </button>
+                    <button type="button" class="button_click" onclick="Niveau2()" onmouseover="mouse(1, 1000)"
+                        onmouseleave="mouse(0, 1000)"> Niveau 2 </button>
+                    <button type="button" class="button_click" onclick="Niveau3()" onmouseover="mouse(1, 10000)"
+                        onmouseleave="mouse(0, 10000)"> Niveau 3 </button>
+                </section>
+
+                <!--PARTIE 1_3 : Jeu de la partie + Message d'erreur si valeur erronnée-->
+                <section id="BoutonsPartie1_3">
+                    <input type="number" id="recup" name="ChiffreADeviner" placeholder="Ex. : 71,77,05 " required>
+                    <button id="button" type="button" class="button_click" onclick="Partie1_3()"> Valider </button>
+                </section>
+                <section id="MessageErreur"></section>
+
+                <!-- PARTIE 2_1 :  
+                    Phase 1 : Consigne + bouton "jouer" -->
+                <section id="JouerPartie2"> <button id="BoutonJouerPartie2" type="button" class="button_click"
+                        onclick="Partie2_1();"> Jouer </button></section>
+                <!-- Phase 2 : Consigne + bouton "c'est bon"-->
+                <section id="GenererChiffreAleatoire"><button id="BoutonGenererChiffreAleatoire" type="button"
+                        class="button_click" onclick="Partie2_2()"> C'est bon ! </button></section>
+
+                <!-- PARTIE 2_2 : Dire si c'est plus ou moins -->
+                <section id="BoutonsPartie2_2">
+                    <button id="buttonPlus" type="button" class="button_click" onclick="CestPlus()"> C'est plus
+                    </button>
+                    <button id="buttonMoins" type="button" class="button_click" onclick="CestMoins()"> C'est moins
+                    </button>
+                    <button id="buttonCestCa" type="button" class="button_click" onclick="CestCa()"> C'est ça !
+                    </button>
+                </section>
+
+                <!-- PARTIE 2_3 : Transition finale + bouton rejouer  -->
+                <section id="Rejouer"><button id="BoutonRejouer" type="button" class="button_click"
+                        onclick='window.location.reload(false)' value="Rafraichir"> Rejouer </button></section>
+
+                <!-- Partie 2_2 : Image du robot -->
+                <img id="Robot" src="robot-design_copie.svg">
+
+                <!-- Partie 1_2 : Souris over les boutons de niveau, fais apparaitre une indication  -->
+                <section id="Survol"></section>
+
+            </article>
+            <!-- PARTIE 2_2 : Robot génère un chiffre aléatoire -->
+            <span id="BlocChiffreAleatoire"> <span id="LeChiffreAleatoire2"></span></span>
+
+            <!-- Partie 1_3: bulles "C'est plus" et "C'est moins"-->
+            <section id=bulle></section>
+    </main>
+</body>
+
+</html>

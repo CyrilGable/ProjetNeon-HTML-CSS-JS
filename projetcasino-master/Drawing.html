@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="Drawing.css">
+    <title>PixelDrawer</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="glow"><a href="index.html">Neon Games</a></h1>
+        <nav>
+            <ul class="nav__items">
+                <li><a href="tallyclick.html" class="button">Tallyclick</a></li>
+                <li><a href="Drawing.html" class="button">Pixeldrawer</a></li>
+                <li><a href="puissanceq.html" class="button">Puissance4</a></li>
+                <li><a href="JustePrix.html" class="button">Justeprix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Pixel Drawer</h2>
+
+    <div id="buttonjeu">
+        <button id="reset" onclick="localStorage.clear();window.location.reload()">Reset</button>
+        <input type="color" id="palette" value="#fffff">
+        <label for="palette">
+            <p id="white">Selecteur de couleur</p>
+        </label>
+    </div>
+    <div id="backzone">
+        <div id="zone"></div>
+    </div>
+    <div id="backregle">
+        <div id="regle">
+            <p>
+                Faites preuve d'imagination, soyez libre, inventif, a vos pinceaux.
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="Drawing.js"></script>
+
+</body>
+
+</html>

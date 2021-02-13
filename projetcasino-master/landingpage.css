@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+:root {
+  /* Base font size */
+  font-size: 9px;
+  /* Set neon color */
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 90px;
+  background-color: #05081c;
+}
+
+li, a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav__items {
+  list-style: none;
+}
+
+.nav__items li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__items li a {
+  transition: all 0.3s ease 0s;
+}
+
+body {
+  background-color: #070b24;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+h1 a {
+  font-family: "Montserrat";
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 8px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+  text-transform: uppercase;
+  padding-bottom: 50px;
+}
+
+main>ul li {
+  display: flex;
+  justify-content: center;
+}
+
+main>p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.averto {
+  padding-top: 20px;
+  color: rgba(230, 22, 22, 0.623);
+}
+
+.glow {
+  font-size: 30px;
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.button {
+  /* Code inspiré par: https://codepen.io/GeorgePark/pen/MrjbEr */
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 2rem 0.5rem 2.5rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.button::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.button::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 80%;
+  margin: 28px;
+  display: flex;
+  border-radius: 0.3cm;
+  color: #fff;
+  border: solid #fff 2px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 8px;
+  color: #fff;
+}
+
+.div_card_one {
+  margin: 20px 20px 0px 20px;
+  display: inline-flex;
+}
+
+.div_card_two {
+  margin: 20px 20px 0px 20px;
+  display: inline-flex;
+}
+
+.img {
+  border-radius: 0.4cm;
+  padding: 8px;
+}
+
+/* Animate neon flicker */
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color), 0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+    box-shadow: 0 0 .5rem #fff, inset 0 0 .5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color), 0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.glow_items:hover {
+  font-size: 16px;
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+{}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="puissanceq.css">
+    <title>Puissance4</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="glow"><a href="index.html">Neon Games</a></h1>
+        <nav>
+            <ul class="nav__items">
+                <li><a href="tallyclick.html" class="button">Tallyclick</a></li>
+                <li><a href="Drawing.html" class="button">Pixeldrawer</a></li>
+                <li><a href="puissanceq.html" class="button">Puissance4</a></li>
+                <li><a href="JustePrix.html" class="button">Justeprix</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 id="titreez">Puissance 4 </h2>
+
+    <div id="boutonjeu">
+        <input type="button" id="reset" onclick="localStorage.clear();window.location.reload(false)" value="Reset">
+        <span id="tour"></span>
+    </div>
+
+    <div id="backzone">
+        <div id="background">
+            <div id="zone">
+            </div>
+        </div>
+    </div>
+
+    <div id="backregle">
+        <div id="regle">
+            <p>
+                Le vainqueur est le joueur qui réalise le premier un alignement (horizontal, vertical ou diagonal)
+                consécutif d'au moins quatre pions de sa couleur. Si, alors que toutes les cases de la grille de jeu
+                sont remplies, aucun des deux joueurs n'a réalisé un tel alignement, la partie est déclarée nulle.
+                <br><a
+                    href="https://fr.wikipedia.org/wiki/Puissance_4#:~:text=R%C3%A8gles%20du%20jeu,-Le%20but%20du&text=Le%20vainqueur%20est%20le%20joueur,la%20partie%20est%20d%C3%A9clar%C3%A9e%20nulle."><span
+                        id="esp">En savoir plus</span></a>
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="puissanceq.js"></script>
+
+</body>
+
+</html>
